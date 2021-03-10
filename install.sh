@@ -2,8 +2,8 @@
 
 set -e
 
-gh_repo="papirus-icon-theme"
-gh_desc="Papirus icon theme"
+gh_repo="mimetype-icons-for-pop_os"
+gh_desc="Additional icons for Pop!_OS"
 
 cat <<- EOF
 
@@ -19,13 +19,13 @@ cat <<- EOF
 
 
   $gh_desc
-  https://github.com/PapirusDevelopmentTeam/$gh_repo
+  https://github.com/eggbean/$gh_repo
 
 
 EOF
 
 : "${DESTDIR:=/usr/share/icons}"
-: "${ICON_THEMES:=Papirus ePapirus Papirus-Dark Papirus-Light}"
+: "${ICON_THEMES:=Papirus}"
 : "${TAG:=master}"
 : "${uninstall:=false}"
 
@@ -50,7 +50,7 @@ _sudo() {
 _download() {
     _msg "Getting the latest version from GitHub ..."
     wget -O "$temp_file" \
-        "https://github.com/PapirusDevelopmentTeam/$gh_repo/archive/$TAG.tar.gz"
+        "https://github.com/eggbean/$gh_repo/archive/$TAG.tar.gz"
     _msg "Unpacking archive ..."
     tar -xzf "$temp_file" -C "$temp_dir"
 }

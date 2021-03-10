@@ -2,8 +2,8 @@
 
 set -e
 
-gh_repo="papirus-icon-theme"
-gh_desc="Papirus icon theme"
+gh_repo="mimetype-icons-for-pop_os"
+gh_desc="Additional icons for Pop!_OS"
 
 cat <<- EOF
 
@@ -19,7 +19,7 @@ cat <<- EOF
 
 
   $gh_desc
-  https://github.com/PapirusDevelopmentTeam/$gh_repo
+  https://github.com/eggbean/$gh_repo
 
 
 EOF
